@@ -25,7 +25,6 @@ export function Header({ data, blogPosts, events }: HeaderProps) {
   const eventList = events?.data || [];
   const menuRef = useRef<HTMLDivElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
-  const isMobileView = window.innerWidth <= 900;
 
   useEffect(() => {
     const checkIsMobile = () => setIsMobile(window.innerWidth <= 900);
