@@ -1,0 +1,70 @@
+@import '../../base/variables'; 
+
+.article-overview {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 12rem;
+  @include respond(phone) {
+    flex-direction: column-reverse;
+      margin-bottom: 4rem;
+  }
+  &__info {
+    width: 60%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__headline {
+    margin-bottom: 2.4rem;
+    color: #333;
+
+  }
+
+  &__description {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: #666;
+  }
+
+  &__contents {
+    width: 35%;
+    padding: 3rem;
+    font-size: 2rem;
+    color: #333;
+    list-style: none;
+
+    & li {
+      margin-bottom: 1.8rem;
+      text-align: right;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $orange; 
+        text-decoration: underline;
+        transition: all 0.2s ease;
+        display: block;
+        padding: 1rem;
+        border-radius: 0.8rem;
+
+        &:hover {
+          color: $black;
+          transform: translateX(5px);
+          text-decoration: underline;
+        }
+      }
+      @include respond(phone) {
+        text-align: left;
+      }
+    }
+     @include respond(phone) {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 3rem;
+     }
+  }
+}

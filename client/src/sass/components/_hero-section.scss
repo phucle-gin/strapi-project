@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 83rem;
+  padding: 22rem 4.8rem 0;
+  margin-bottom: 12.5rem;
+  @include respond(phone) {
+    min-height: 64rem;
+     padding: 4.8rem 2rem;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+    }
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__headline {
+    margin-bottom: 6.5rem;
+    max-width: 60%;
+    
+    &--orange {
+      color: white;
+    }
+    @include respond(small-phone) {
+      max-width: 100%;
+    }
+  }
+
+  &__author,
+  &__published-at {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.8rem;
+  }
+
+  &__author {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__published-at {
+    font-weight: 400;
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    &--orange {
+      filter: invert(62%) sepia(21%) saturate(1646%) hue-rotate(348deg)
+        brightness(88%) contrast(81%);
+    }
+  }
+
+
+  &--no-background {
+    padding: 7rem 4.8rem 0;
+    margin-bottom: 5rem; 
+    min-height: 0;
+    .hero__headline--orange {
+      color: $black; // Reset color when no background image
+    }
+    @include respond(small-phone) {
+      padding: 4rem 2rem 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_paragraph_with_media",
+  "info": {
+    "displayName": "Paragraph With Media"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "videos", "files"]
+    },
+    "youtubeUrl": {
+      "type": "string"
+    },
+    "reversed": {
+      "type": "boolean",
+      "default": false
+    },
+    "imageLandscape": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

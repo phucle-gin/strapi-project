@@ -1,0 +1,66 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4.8rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  @include respond(small-phone) {
+    flex-direction: column;
+    padding-right: 2rem;
+  }
+  &--reversed {
+    flex-direction: row-reverse;
+    padding-left: 4.8rem;
+    padding-right: 0;
+
+    & .info__image {
+      border-radius: 329px 0px 0px 329px;
+    }
+    @include respond(small-phone) {
+      flex-direction: column;
+      padding-left: 2rem;
+         & .info__text {
+          padding-left: 0;
+          padding-right: 2rem;
+         }
+    }
+  }
+
+  &__image,
+  &__text {
+    width: 48%;
+      @include respond(small-phone) {
+        width: 100%;
+    }
+  }
+
+   &__text {
+      @include respond(small-phone) {
+        padding-left: 2rem;
+    }
+  }
+  &__image {
+    border-radius: 0px 329px 329px 0px;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+
+  &__headline {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+
+    &--turquoise {
+      color: $turquoise;
+    }
+
+    &--orange {
+      color: $orange;
+    }
+  }
+
+  & .btn {
+    margin-top: 3rem;
+  }
+}
