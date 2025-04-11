@@ -4,6 +4,8 @@
   "description": "Example of using Strapi 5 with Next.js 15",
   "type": "module",
   "scripts": {
+    "build": "strapi build",
+    "start": "strapi start",
     "client": "yarn dev --prefix ../client/",
     "server": "yarn dev --prefix ../server/",
     "setup:client": "cd client && yarn && node --loader ts-node/esm ../copy-env.mts ./",
