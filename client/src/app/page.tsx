@@ -3,7 +3,7 @@ import { ContentList } from "@/components/ContentList";
 import { BlogCard } from "@/components/BlogCard";
 import { getHomePage } from "@/data/loaders";
 import { notFound } from "next/navigation";
-
+import dynamic from "next/dynamic";
 async function loader() {
   const data = await getHomePage();
   if (!data) notFound();
