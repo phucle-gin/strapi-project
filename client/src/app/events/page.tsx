@@ -36,7 +36,7 @@ export default async function AllEventsRoute({
   return (
     <div className="container">
       <ContentList
-        headline="All Events"
+        headline="All Learning Foundation Blogs"
         path="/api/events"
         query={query}
         page={page}

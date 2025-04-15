@@ -83,7 +83,7 @@ export default async function SingleBlogRoute({ params }: PageProps) {
         />
         <BlockRenderer blocks={blocks} />
         <ContentList
-          headline="Related events"
+          headline="Related blogs"
           path="/api/events"
           component={EventCard}
           featured={true}
