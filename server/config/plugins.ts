@@ -1,19 +1,18 @@
-export default {
+module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: 'cloudinary', // or 'local'
+      provider: 'cloudinary',
       providerOptions: {
-        cloud_name: 'your_cloud_name',
-        api_key: 'your_api_key',
-        api_secret: 'your_api_secret',
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
       },
       actionOptions: {
         upload: {
-          // Don't request automatic image transformations
-          // Cloudinary will just save the original
+          // No transformations or thumbnails requested
         },
       },
-      breakpoints: {}, // 👈 disables all format breakpoints
+      breakpoints: {},
     },
   },
-};
+});
